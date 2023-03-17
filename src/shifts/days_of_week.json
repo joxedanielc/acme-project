@@ -1,0 +1,37 @@
+[
+  {
+    "dow": 0,
+    "name": "Sunday",
+    "short_name": "SU"
+  },
+  {
+    "dow": 1,
+    "name": "Monday",
+    "short_name": "MO"
+  },
+  {
+    "dow": 2,
+    "name": "Tuesday",
+    "short_name": "TU"
+  },
+  {
+    "dow": 3,
+    "name": "Wednesday",
+    "short_name": "WE"
+  },
+  {
+    "dow": 4,
+    "name": "Thursday",
+    "short_name": "TH"
+  },
+  {
+    "dow": 5,
+    "name": "Friday",
+    "short_name": "FR"
+  },
+  {
+    "dow": 6,
+    "name": "Saturday",
+    "short_name": "SA"
+  }
+]

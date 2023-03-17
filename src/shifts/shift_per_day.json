@@ -1,0 +1,86 @@
+[
+  {
+    "dow": 1,
+    "shift_id": 1
+  },
+  {
+    "dow": 2,
+    "shift_id": 1
+  },
+  {
+    "dow": 3,
+    "shift_id": 1
+  },
+  {
+    "dow": 4,
+    "shift_id": 1
+  },
+  {
+    "dow": 5,
+    "shift_id": 1
+  },
+  {
+    "dow": 1,
+    "shift_id": 2
+  },
+  {
+    "dow": 2,
+    "shift_id": 2
+  },
+  {
+    "dow": 3,
+    "shift_id": 2
+  },
+  {
+    "dow": 4,
+    "shift_id": 2
+  },
+  {
+    "dow": 5,
+    "shift_id": 2
+  },
+  {
+    "dow": 1,
+    "shift_id": 3
+  },
+  {
+    "dow": 2,
+    "shift_id": 3
+  },
+  {
+    "dow": 3,
+    "shift_id": 3
+  },
+  {
+    "dow": 4,
+    "shift_id": 3
+  },
+  {
+    "dow": 5,
+    "shift_id": 3
+  },
+  {
+    "dow": 6,
+    "shift_id": 4
+  },
+  {
+    "dow": 0,
+    "shift_id": 4
+  },
+  {
+    "dow": 6,
+    "shift_id": 5
+  },
+  {
+    "dow": 0,
+    "shift_id": 5
+  },
+  {
+    "dow": 6,
+    "shift_id": 6
+  },
+  {
+    "dow": 0,
+    "shift_id": 6
+  }
+]

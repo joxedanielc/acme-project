@@ -1,0 +1,44 @@
+[
+  {
+    "shift_id": 1,
+    "punchIn": "00:01",
+    "punchOut": "09:00",
+    "costPerHour": "25",
+    "currency": "USD"
+  },
+  {
+    "shift_id": 2,
+    "punchIn": "09:01",
+    "punchOut": "18:00",
+    "costPerHour": "15",
+    "currency": "USD"
+  },
+  {
+    "shift_id": 3,
+    "punchIn": "18:01",
+    "punchOut": "00:00",
+    "costPerHour": "20",
+    "currency": "USD"
+  },
+  {
+    "shift_id": 4,
+    "punchIn": "00:01",
+    "punchOut": "09:00",
+    "costPerHour": "30",
+    "currency": "USD"
+  },
+  {
+    "shift_id": 5,
+    "punchIn": "09:01",
+    "punchOut": "18:00",
+    "costPerHour": "20",
+    "currency": "USD"
+  },
+  {
+    "shift_id": 6,
+    "punchIn": "18:01",
+    "punchOut": "00:00",
+    "costPerHour": "25",
+    "currency": "USD"
+  }
+]
