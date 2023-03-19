@@ -11,11 +11,28 @@ export interface ShiftValue {
   shift_id: number;
   punchIn: string;
   punchOut: string;
-  costPerHour: number;
+  costPerHour: string;
   currency: string;
 }
 
 export interface ShiftPerDay {
-  dow: number;
-  shift_id: number;
+  dow: DaysOfShift;
+  shift: ShiftValue;
+  dowPayment: number;
+}
+
+export interface ShiftDataByDay {
+  dow: DaysOfShift;
+  shift: ShiftDetailByDay;
+}
+
+export interface ShiftDetailByDay {
+  punchIn: string;
+  punchOut: string;
+}
+
+export interface DetailReport {
+  employeeName: string;
+  nameDow: string;
+  totalPerDay: number;
 }

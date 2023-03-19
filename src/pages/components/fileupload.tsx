@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import styles from "@/styles/Home.module.css";
-import { FileUploaded } from "@/utils";
 import { calculatePayment } from "@/functions";
+import { DetailReport } from "@/utils";
+import Report from "./report";
 
 function FileUploadPage() {
   const [isFilePicked, setIsFilePicked] = useState(false);
   const [dataInFile, setDataInFile] = useState<string[]>();
+  const [reportDetail, setReportDetail] = useState<DetailReport[]>([]);
 
   let fileReader: any;
 
@@ -31,10 +33,21 @@ function FileUploadPage() {
 
   const handleSubmission = (event: React.MouseEvent) => {
     console.log(dataInFile);
+
     if (dataInFile !== undefined && dataInFile.length > 0) {
-      calculatePayment(dataInFile);
+      setReportDetail(calculatePayment(dataInFile));
     }
-    event.preventDefault();
+
+    let groupedData = reportDetail.reduce((acc: any, obj: any) => {
+      let key = obj.employeeName;
+      if (!acc[key]) {
+        acc[key] = [];
+      }
+      acc[key].push({ nameDow: obj.nameDow, totalPerDay: obj.totalPerDay });
+      return acc;
+    }, {});
+
+    console.log(groupedData);
   };
 
   return (
@@ -47,15 +60,11 @@ function FileUploadPage() {
           name="file"
           onChange={changeHandler}
         />
-        {isFilePicked && (
-          <div>
-            <p>Result: {"name"}</p>
-          </div>
-        )}
       </div>
       <button onClick={(e) => handleSubmission(e)} className={styles.button}>
         Calculate
       </button>
+      {reportDetail.length > 0 && <Report details={reportDetail} />}
     </div>
   );
 }
