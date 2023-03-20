@@ -1,38 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ACME Project
 
-## Getting Started
+This project is a small responsive web application that allows a `.txt` file to be upload and it will generate a report table with the name of the employees and total earned.
 
-First, run the development server:
+## Features
+
+- Upload file
+- E2E Tests
+
+# Table of contents
+
+1. [Tech Stack](https://github.com/joxedanielc/acme-project#tech-stack)
+2. Code Explanation
+   1. [Functions](https://github.com/joxedanielc/acme-project#functions)
+   2. [Utils](https://github.com/joxedanielc/acme-project#utils)
+3. [Run Locally](https://github.com/joxedanielc/acme-project#run-locally)
+4. [Feedback](https://github.com/joxedanielc/acme-project#feedback)
+5. [License](https://github.com/joxedanielc/acme-project#license)
+
+## Tech Stack
+
+**Client:** React, Nextjs, Typescript, HTML5, CSS3, Playwright
+
+## Code Explanation
+
+### Functions
+
+The file `functions.ts` contains the logic to normalize the data to an interface in order to use the response to render the data.
+
+### Utils
+
+The file `utils.ts` contains the interfaces to create the expected objects with its properties, and the functions that handle the set of data.
+
+## Run Locally
+
+### Important:
+
+Clone the project
+
+```bash
+  git clone https://github.com/joxedanielc/acme-project.git
+```
+
+Go to the project directory
+
+```bash
+cd acme-project
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To run e2e test (you NEED to start the backend before)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+npx playwright test
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+or if you'd like to see the test on the browser:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+npx playwright test --debug
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Feedback
 
-## Learn More
+If you have any feedback, please leave a comment.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[MIT](https://choosealicense.com/licenses/mit/)
