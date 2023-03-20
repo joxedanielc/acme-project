@@ -2,6 +2,8 @@
 
 This project is a small responsive web application that allows a `.txt` file to be upload and it will generate a report table with the name of the employees and total earned.
 
+The purpose of this project is to show the developer skill to not use any dependecies or libraries to mormalize and render the data. Only using the functiones provided by the code lenguage.
+
 ## Features
 
 - Upload file
@@ -47,7 +49,7 @@ Go to the project directory
 cd acme-project
 ```
 
-Install dependencies
+Install dependencies (This step is necessary in order to install Playwright, and no any other depencies.)
 
 ```bash
 npm install
@@ -59,7 +61,7 @@ Start the server
 npm run dev
 ```
 
-To run e2e test (you NEED to start the backend before)
+To run e2e test
 
 ```bash
 npx playwright test
