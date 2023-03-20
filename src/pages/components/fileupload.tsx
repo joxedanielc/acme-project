@@ -55,13 +55,18 @@ function FileUploadPage() {
       <div className={styles.upload}>
         <label>{"Choose a file (.txt): "}</label>
         <input
+          data-id={`upload-file`}
           accept={".txt"}
           type="file"
           name="file"
           onChange={changeHandler}
         />
       </div>
-      <button onClick={(e) => handleSubmission(e)} className={styles.button}>
+      <button
+        data-id={`calculate-shifts`}
+        onClick={(e) => handleSubmission(e)}
+        className={styles.button}
+      >
         Calculate
       </button>
       {reportDetail.length > 0 && <Report details={reportDetail} />}

@@ -26,13 +26,15 @@ const Report: FunctionComponent<Props> = ({ details }) => {
           <th>Total</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody data-id={`reportrow`}>
         <>
-          {summedData.map((detail: any) => {
+          {summedData.map((detail: any, index: number) => {
             return (
-              <tr>
-                <td>{detail.name}</td>
-                <td>{detail.total}</td>
+              <tr key={index}>
+                <td data-id={`reportname${index}`}>{detail.name}</td>
+                <td data-id={`reporttotal${index}`}>{`${Math.trunc(
+                  detail.total
+                )} USD`}</td>
               </tr>
             );
           })}
