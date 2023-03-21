@@ -2,7 +2,7 @@
 
 This project is a small responsive web application that allows a `.txt` file to be upload and it will generate a report table with the name of the employees and total earned.
 
-The purpose of this project is to show the developer skill to not use any dependecies or libraries to mormalize and render the data. Only using the functiones provided by the code lenguage.
+The purpose of this project is to show the developer's skills to not use any dependecies or libraries to mormalize and/or render the data. Only using the functiones provided by the code lenguage.
 
 ## Features
 
@@ -27,11 +27,11 @@ The purpose of this project is to show the developer skill to not use any depend
 
 ### Functions
 
-The file `functions.ts` contains the logic to normalize the data to an interface in order to use the response to render the data.
+The file `functions.ts` contains the logic to normalize the data to an interface in order to use the response to render it.
 
 ### Utils
 
-The file `utils.ts` contains the interfaces to create the expected objects with its properties, and the functions that handle the set of data.
+The file `utils.ts` contains the interfaces to create the expected objects with its properties, and the functions that handle the data set.
 
 ## Run Locally
 

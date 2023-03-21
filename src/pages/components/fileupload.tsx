@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "@/styles/Home.module.css";
-import { calculatePayment } from "@/functions";
+import { calculatePayment, validateFile } from "@/functions";
 import { DetailReport } from "@/utils";
 import Report from "./report";
 
 function FileUploadPage() {
-  const [isFilePicked, setIsFilePicked] = useState(false);
   const [dataInFile, setDataInFile] = useState<string[]>();
   const [reportDetail, setReportDetail] = useState<DetailReport[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   let fileReader: any;
 
@@ -28,27 +28,18 @@ function FileUploadPage() {
     fileReader = new FileReader();
     fileReader.onloadend = handleFileRead;
     fileReader.readAsText(file[0]);
-    setIsFilePicked(true);
   };
 
-  const handleSubmission = (event: React.MouseEvent) => {
-    console.log(dataInFile);
-
+  const handleSubmission = () => {
     if (dataInFile !== undefined && dataInFile.length > 0) {
-      setReportDetail(calculatePayment(dataInFile));
-    }
-
-    let groupedData = reportDetail.reduce((acc: any, obj: any) => {
-      let key = obj.employeeName;
-      if (!acc[key]) {
-        acc[key] = [];
+      setError(validateFile(dataInFile));
+      if (error === null) {
+        setReportDetail(calculatePayment(dataInFile));
       }
-      acc[key].push({ nameDow: obj.nameDow, totalPerDay: obj.totalPerDay });
-      return acc;
-    }, {});
-
-    console.log(groupedData);
+    }
   };
+
+  useEffect(() => {}, [reportDetail, error]);
 
   return (
     <div className={styles.container}>
@@ -64,12 +55,18 @@ function FileUploadPage() {
       </div>
       <button
         data-id={`calculate-shifts`}
-        onClick={(e) => handleSubmission(e)}
+        onClick={handleSubmission}
         className={styles.button}
       >
         Calculate
       </button>
-      {reportDetail.length > 0 && <Report details={reportDetail} />}
+      {error === null && reportDetail.length > 0 ? (
+        <Report details={reportDetail} />
+      ) : (
+        <span data-id={`error-message`} className={styles.errormessage}>
+          {error}
+        </span>
+      )}
     </div>
   );
 }
